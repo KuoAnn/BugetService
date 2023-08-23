@@ -26,7 +26,6 @@ namespace BugetService
 
             app.UseAuthorization();
 
-
             app.MapControllers();
 
             app.Run();

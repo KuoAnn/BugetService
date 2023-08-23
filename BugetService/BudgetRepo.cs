@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace BugetService
+﻿namespace BugetService
 {
     public interface IBudgetRepo
     {
         List<Budget> GetAll();
     }
+
     public class BudgetRepo
     {
         public List<Budget> GetAll()
@@ -13,6 +12,7 @@ namespace BugetService
             return new List<Budget>();
         }
     }
+
     public class Budget
     {
         public string YearMonth { get; set; }
