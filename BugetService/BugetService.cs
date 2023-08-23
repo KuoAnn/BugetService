@@ -16,19 +16,7 @@ namespace BugetService
             //
             if (StartDate > EndDate)
             {
-                return 0;
-            }
-            if (StartDate == EndDate)
-            {
-                amount = query.Where(x => x.YearMonth == StartDate.ToString("yyyyMM")).Select(x => x.Amount).FirstOrDefault();
-                if (amount is not null)
-                {
-                    return amount = amount / DateTime.DaysInMonth(StartDate.Year, StartDate.Month);
-                }
-                else
-                {
-                    return 0;
-                }
+                return amount;
             }
 
             var sDate = Convert.ToInt32(StartDate.ToString("yyyyMM"));
